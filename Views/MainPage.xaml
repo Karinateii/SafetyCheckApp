@@ -1,0 +1,28 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:SafetyCheckApp.ViewModels"
+             x:Class="SafetyCheckApp.Views.MainPage"
+             Title="Safety Check-In">
+
+    <StackLayout Padding="20">
+        <!-- Welcome Text -->
+        <Label Text="Welcome to Safety Check-In"
+               FontSize="24"
+               HorizontalOptions="Center"
+               Margin="0,20,0,10" />
+
+        <!-- Check-In Button -->
+        <Button Text="Check In Now"
+                Command="{Binding CheckInCommand}" 
+                BackgroundColor="SkyBlue"
+                TextColor="White" 
+                HeightRequest="50" />
+
+        <!-- Status Label -->
+        <Label x:Name="StatusLabel"
+               Text="{Binding CheckInStatus}"
+               FontSize="18"
+               HorizontalOptions="Center"
+               Margin="0,20,0,0" />
+    </StackLayout>
+</ContentPage>
